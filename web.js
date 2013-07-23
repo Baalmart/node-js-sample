@@ -1,12 +1,8 @@
 var express = require('express');
-var app = express();
-app.use(express.logger());
-
-var buff = new Buffer(index.html, "utf-8");
-ans= buff.toString('utf8',0,buff.length);
+var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(ans);
+  response.send('Hello wWorld 3!');
 });
 
 var port = process.env.PORT || 5000;
