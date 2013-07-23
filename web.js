@@ -2,7 +2,8 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello wWorld 3!');
+ len = index.html.length;
+ response.send((fs.readFileSync(index.html,'utf8')).toString('utf8',0,len));
 });
 
 var port = process.env.PORT || 5000;
