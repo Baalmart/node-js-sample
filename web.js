@@ -6,7 +6,7 @@ var app = express.createServer(express.logger());
 // this case then this function returns a string
 app.get('/', function(request, response) {
   var fs = require('fs');
-  var content = fs.readFileSync('index1.html', 'utf-8');
+  var content = fs.readFileSync('index.html', 'utf-8');
   response.send(content);
 });
 
