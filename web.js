@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express.createServer(express.logger());
 
+//I hear that the above line should be var app = express() coz it is deprecated! This is all just some crazy stuff!
+
 // way to do it without a buffer since fs.readFileSync
 // says if you include encoding option ('utf-8') in 
 // this case then this function returns a string
@@ -10,8 +12,8 @@ app.get('/', function(request, response) {
   response.send(content);
 });
 
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
+  var port = process.env.PORT || 8080;
+  app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
